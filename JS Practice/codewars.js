@@ -16,5 +16,3 @@ function towerBuilder(nFloors) {
     console.log(answer);
 }
 towerBuilder(6);
-
-console.log(typeof 2)
