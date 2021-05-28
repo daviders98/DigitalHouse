@@ -3,7 +3,9 @@ const path = require("path");
 const app = express();
 
 const publicpath = path.resolve(__dirname,"./public");
-//establecer la carpeta public como una de recursos estáticos para acceder facilmente a ella.
+/*establecer la carpeta public como una de recursos estáticos para acceder facilmente a ella, por
+defecto están en private.
+*/
 app.use(express.static(publicpath));
 
 app.listen(3000,()=>{
