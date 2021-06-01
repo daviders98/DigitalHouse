@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar__menu, .submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  /* hijos de navbar_menu con tag li*/
+  .navbar__menu > li {
+    width: 100%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, .05);
+    border-width: 0 0 1px;
+    text-align: center;
+    background-color: darkslategrey;
+    display: block;
+    min-height: 40px;
+    
+    position: relative;
+  }
+  .navbar__menu > li:hover {
+    background-color: dimgray;
+  }
+  
+  /*navbar_menu > li > a el hijo directo solamente, de otra forma, los descendientes*/
+  .navbar__menu > li a, .navbar__menu > li label {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    display: block;
+    min-height: inherit;
+    padding: 8px;
+  }
+  
+  .submenu > li {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    background-color: darkred;
+  }
+  
+  input[type="checkbox"]:checked + .navbar__menu, 
+  input[type="checkbox"]:checked + .submenu {
+    display: block;
+  }
+  
+  @media (min-width: 560px) {
+    header {
+      position: absolute;
+      width: 100%;
+      top: 0;
+    }
+    .navbar__menu{
+      display: inline-block;
+      width: 100%;
+      height: inherit;
+    }
+    main {
+      margin-top: 68px;
+    }
+    label {
+      display: none;
+    }
+    .navbar__menu > li{
+      width: 25%;
+      float: left;
+      height: inherit;
+      
+    }
+    .navbar__menu > li a, .navbar__menu > li label{
+     height: inherit;
+     padding: 16px;
+    }
+  
+    .navbar__menu > li:hover {
+      background-color: dimgray;
+    }
+    .submenu{
+      position: relative;
+    }
+  }
+  
