@@ -1,0 +1,61 @@
+#sujeto{
+    width:75px;
+    height: 160px;
+    background-image: url(https://freesvg.org/img/1525205509.png);
+    background-repeat: no-repeat;
+    background-position: 0 -220px;
+    animation: caminar 500ms steps(7) infinite,mover 1000ms linear infinite;
+    position: absolute;
+    top:50px;
+    left:0;
+}
+
+@keyframes caminar {
+    0%{
+        background-position: 0 -220px;
+    }
+    100%{
+        background-position: -525px -220px;
+    }
+}
+#suelo{
+    width: 100vw;
+    height: 100px;
+    background-color: green;
+    transition: background-color 1s linear, width 1s linear;
+}
+#suelo:hover{
+    background-color: red;
+    width:50vw;
+}
+#cielo{
+    background-color: cyan;
+    width:100vw;
+    height: 200px;
+    animation: anochecer 10s linear infinite;
+}
+
+body{
+    margin:0;
+}
+
+@keyframes anochecer{
+    0%{
+        background-color: cyan;
+    }
+    50%{
+        background-color:darkblue;
+    }
+    100%{
+        background-color: cyan;
+    }
+}
+
+@keyframes mover {
+    0%{
+        left:0;
+    }
+    100%{
+        left:100vw;
+    }
+}
