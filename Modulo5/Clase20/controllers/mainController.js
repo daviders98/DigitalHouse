@@ -3,7 +3,7 @@ const controller = {
         return res.render("index");
     },
     register:(req,res)=>{
-        return res.send("Registro");
+        return res.render("Registro");
     },
     login:(req,res)=>{
         return res.send("Login");
